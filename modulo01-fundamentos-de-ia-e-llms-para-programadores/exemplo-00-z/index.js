@@ -139,4 +139,4 @@ const results = predictions
     .sort((a, b) => b.prob - a.prob)
     .map(p => `${labelsNomes[p.index]} (${(p.prob * 100).toFixed(2)}%)`)
     .join('\n')
-console.log(results)
+console.log(results);
