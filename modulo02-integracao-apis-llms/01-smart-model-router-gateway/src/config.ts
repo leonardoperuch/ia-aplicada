@@ -6,8 +6,9 @@ console.assert(
 export type ModelConfig = {
     apiKey: string;
     httpReferer: string;
-    xTitle: string;
+    appTitle: string;
     port: number;
+    // model: string;
     models: string[];
     temperature: number;
     maxTokens: number;
@@ -24,8 +25,9 @@ export type ModelConfig = {
 export const config: ModelConfig = {
     apiKey: process.env.OPENROUTER_API_KEY!,
     httpReferer: 'http://pos-ia.com',
-    xTitle: 'SmartModelRouterGateway',
+    appTitle: 'SmartModelRouterGateway',
     port: 3000,
+    // model: 'nvidia/nemotron-3-nano-30b-a3b:free',
     models: [
         // top 4 para a listagem ordenada por preço
         'arcee-ai/trinity-large-preview:free',

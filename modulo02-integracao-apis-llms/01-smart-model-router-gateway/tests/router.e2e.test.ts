@@ -27,7 +27,7 @@ test('routes to cheapest model by default', async () => {
     const response = await app.inject({
         method: 'POST',
         url: '/chat',
-        body:{ question:'What is rate limiting?'}
+        body:{ question:'Complete a frase: O céu é ...'}
     })
     assert.equal(response.statusCode, 200)
     const body = response.json() as LLMResponse
@@ -52,7 +52,7 @@ test('routes to highest throughput model by default', async () => {
     const response = await app.inject({
         method: 'POST',
         url: '/chat',
-        body:{ question:'What is rate limiting?'}
+        body:{ question:'Complete a frase: O céu é ...'}
     })
     assert.equal(response.statusCode, 200)
     const body = response.json() as LLMResponse
