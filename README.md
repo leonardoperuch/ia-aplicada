@@ -208,11 +208,9 @@ Projeto em [exemplo-06-playwright-testes/](./modulo01-fundamentos-de-ia-e-llms-p
 
 Projeto em [exemplo-07-playwright-navegacao/](./modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-07-playwright-navegacao/)
 
-
 #### 8.4 - Usando IA para consultar documentações atualizadas
 
 Projeto em [exemplo-08-context7/](./modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-08-context7/)
-
 
 - https://github.com/upstash/context7#installation
 - https://github.com/ChromeDevTools/chrome-devtools-mcp
@@ -221,7 +219,6 @@ Projeto em [exemplo-08-context7/](./modulo01-fundamentos-de-ia-e-llms-para-progr
 - https://context7.com/websites/nodejs_api
 - https://nextjs.org/
 - https://www.better-auth.com/
-
 
 #### 8.5 - Usando IA para colher dados de telemetria de apps
 
@@ -276,7 +273,6 @@ Projeto em [exemplo-12-embeddings-neo4j/](./modulo01-fundamentos-de-ia-e-llms-pa
 - https://neo4j.com/
 - https://docs.langchain.com/oss/javascript/integrations/text_embedding/transformers
 
-
 #### 10.3 - Criando o primeiro RAG com JavaScript e Neo4j
 
 Projeto em [exemplo-13-embeddings-neo4j-rag/](./modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-13-embeddings-neo4j-rag/)
@@ -285,6 +281,8 @@ Projeto em [exemplo-13-embeddings-neo4j-rag/](./modulo01-fundamentos-de-ia-e-llm
 
 ---
 
-## Problemas no Windows
+## Resolvendo Problemas Comuns
 
-- [Falha ao instalar o `@tensorflow/tfjs-node`](./windows/tensorflow.md)
+- [Problemas comuns com **Docker**](./troubleshooting/docker.md)
+- [Problemas comuns no **Windows**](./troubleshooting/windows/commons.md)
+  - [Configurar **WSL**](./troubleshooting/windows/wsl.md)
