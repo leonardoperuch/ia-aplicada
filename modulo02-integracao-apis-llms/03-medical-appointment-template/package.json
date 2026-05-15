@@ -13,7 +13,7 @@
     "test:unit": "node --inspect --test tests/**/*unit.test.ts",
     "test:e2e:dev": "node --inspect --env-file .env --test --watch tests/**/*e2e.test.ts",
     "test:e2e": "node --inspect --env-file .env --test tests/**/*e2e.test.ts",
-    "langgraph:serve": "npx @langchain/langgraph-cli dev"
+    "langgraph:serve": "npx @langchain/langgraph-cli@1.1.13 dev"
   },
   "keywords": [
     "langchain",
