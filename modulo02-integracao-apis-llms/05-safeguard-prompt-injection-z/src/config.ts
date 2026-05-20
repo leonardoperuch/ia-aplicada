@@ -43,8 +43,10 @@ export const config: ModelConfig = {
   httpReferer: '',
   xTitle: 'IA Devs - Guardrails'!,
   models: [
-    // 'upstage/solar-pro-3:free',
-    'qwen/qwen-2.5-7b-instruct',// unsafe!
+    // 'upstage/solar-pro-3:free', // `404 The free Solar Pro 3 period has ended. To continue using this model, please migrate to the paid slug: upstage/solar-pro-3
+    // 'upstage/solar-pro-3', // deu erro tb
+    'deepseek/deepseek-v4-flash:free',
+    // 'qwen/qwen-2.5-7b-instruct',// unsafe!
   ],
 
   guardrailsModel: 'openai/gpt-oss-safeguard-20b',

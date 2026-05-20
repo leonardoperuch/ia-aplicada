@@ -8,11 +8,11 @@ export const createChatNode = (openRouterService: OpenRouterService) => {
     return async (state: GraphState): Promise<Partial<GraphState>> => {
         try {
 
-            // only for LangSmith Studio - set defaults if not present
-            if(!state.user) {
-                state.user = getUser('ananeri')!;
-                state.guardrailsEnabled = false;
-            }
+            // // only for LangSmith Studio - set defaults if not present
+            // if(!state.user) {
+            //     state.user = getUser('ananeri')!;
+            //     state.guardrailsEnabled = false;
+            // }
 
             const userPrompt = state.messages.at(-1)?.text!
             const template = PromptTemplate.fromTemplate(prompts.system)

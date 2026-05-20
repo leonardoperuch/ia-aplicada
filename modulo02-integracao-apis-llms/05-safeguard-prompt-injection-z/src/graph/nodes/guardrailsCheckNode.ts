@@ -1,7 +1,7 @@
 import { PromptTemplate } from '@langchain/core/prompts';
 import { OpenRouterService } from '../../services/openrouterService.ts';
 import type { GraphState } from '../state.ts';
-import { prompts } from '../../config.ts';
+import { getUser, prompts } from '../../config.ts';
 
 export const createGuardrailsCheckNode = (openRouterService: OpenRouterService) => {
     return async (state: GraphState): Promise<Partial<GraphState>> => {
@@ -13,6 +13,12 @@ export const createGuardrailsCheckNode = (openRouterService: OpenRouterService) 
             // const systemPrompt = prompts.system
             //  .replace('{USER_ROLE}', state.user.role);
             //  .replace('{USER_NAME}', state.user.displayName);
+
+            // only for LangSmith Studio - set defaults if not present
+            if (!state.user) {
+                state.user = getUser("ananeri")!;
+                state.guardrailsEnabled = false;
+            }
 
             const systemPrompt = await template.format({
                 USER_ROLE: state.user.role,
@@ -27,6 +33,7 @@ export const createGuardrailsCheckNode = (openRouterService: OpenRouterService) 
             )
 
             return {
+                ...state,
                 guardrailCheck: result
             };
         } catch (error) {
