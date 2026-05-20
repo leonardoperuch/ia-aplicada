@@ -10,7 +10,7 @@
     "chat:member:safe": "node --experimental-strip-types --env-file .env src/index.ts --user ananeri --prompt-path 'prompts/user/read-env.txt'",
     "chat:member:unsafe:env": "node --experimental-strip-types --env-file .env src/index.ts --user ananeri --unsafe --prompt-path 'prompts/user/read-env.txt'",
     "chat:member:unsafe:package": "node --experimental-strip-types --env-file .env src/index.ts --user ananeri --unsafe --prompt-path 'prompts/user/read-package-version.txt'",
-    "langgraph:serve": "npx @langchain/langgraph-cli dev"
+    "langgraph:serve": "npx @langchain/langgraph-cli@1.1.13 dev"
   },
   "keywords": [
     "langchain",
