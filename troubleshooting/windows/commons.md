@@ -8,6 +8,18 @@
 
 Este documento reúne padrões de scripts `npm` e dependências do material do curso que falham no **Windows** nativo (sem **WSL** nem **Git Bash**). Cada caso traz uma solução portátil entre os sistemas operacionais.
 
+## nvm
+
+- https://github.com/coreybutler/nvm-windows/releases
+
+Dando permissão para o **npm**:
+
+> **PowerShell**
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 ## Dependências nativas (binários)
 
 Ao instalar pacotes que compilam binários nativos, por exemplo: `@tensorflow/tfjs-node`, `better-sqlite3`, `@huggingface/transformers` ou `@xenova/transformers`, o `npm i`/`npm ci` falha sem o ambiente de compilação **C++** configurado no **Windows**.
@@ -191,10 +203,6 @@ npm install --save-dev glob
 + "test": "glob -c \"node --test\" \"tests/**/*.test.ts\""
 ```
 
-> [!NOTE]
->
-> Nem o `cross-env` nem o `shx` resolvem este caso. O `cross-env` apenas trata variáveis de ambiente. O `shx` expande globs apenas para os comandos que ele mesmo implementa, e não para programas externos como o `node`.
-
 Exemplos afetados:
 
 - [modulo02-integracao-apis-llms/01-smart-model-router-gateway/](../../modulo02-integracao-apis-llms/01-smart-model-router-gateway/)
@@ -221,7 +229,7 @@ Exemplos afetados:
 
 Ao usar o operador `&&` em comandos, por exemplo: `cd dir && node ...`, o **PowerShell 5.1** (padrão do **Windows 10** e **11**) falha com `ParserError: The token '&&' is not a valid statement separator in this version`.
 
-Para resolver, instale o **PowerShell 7** ou superior, que adicionou suporte aos operadores `&&` e `||`, por exemplo:
+Para resolver, instale o **PowerShell 7** ou superior:
 
 > **PowerShell**
 
@@ -239,7 +247,7 @@ $PSVersionTable.PSVersion
 
 > [!TIP]
 >
-> Após a atualização para o **PowerShell 7+**, os scripts do material que usam `&&` voltam a funcionar sem alterações.
+> Ao usar o **PowerShell 7+**, os scripts que usam `&&` voltam a funcionar sem alterações.
 
 Exemplos afetados:
 

@@ -281,8 +281,52 @@ Projeto em [exemplo-13-embeddings-neo4j-rag/](./modulo01-fundamentos-de-ia-e-llm
 
 ---
 
+## Modulo 05 - Ferramentas de IA para UI e UX
+
+### Engines de IA & Prototipação Conversacional
+*   [Google AI Studio](https://aistudio.google.com/) — Laboratório analítico para engenharia de contexto, parametrização determinística de temperatura e manipulação de instruções de sistema.
+*   [Google Stitch](https://stitch.withgoogle.com) — Agente de design conversacional focado em geração de estruturas semânticas limpas para web desktop.
+*   [Google Jules](https://jules.google/) — Agente autônomo na nuvem integrado ao ciclo de vida Git para geração de features e barramento de dados full-stack.
+
+### IDEs e Protocolos de Contexto
+*   [Antigravity Workspace](https://antigravity.dev/) — IDE focada em inteligência nativa e suporte centralizado ao Model Context Protocol.
+
+### Design Systems e Artefatos Visuais
+*   [Figma](https://www.figma.com/) — Handoff de especificações técnicas de alta fidelidade (Auto-layout, flexbox, paddings e gaps) através da extração via *Dev Mode*.
+*   [Mermaid Live Editor](https://mermaid.live) — Renderização e versionamento de diagramas dinâmicos baseados em código Markdown corporativo.
+
+### Frameworks & Ferramentas de Linha de Comando (CLI)
+*   [Firebase Genkit](https://genkit.dev/) — Framework de IA de código aberto do Google para integração, orquestração e tipagem estrita de LLMs no back-end.
+*   [Nx Dev Tools](https://nx.dev) — Sistema de compilação inteligente e monorepo focado na governança de projetos enterprise de grande escala.
+*   [OpenSpec](https://openspec.dev/) — Motor de contratos utilizado para a imposição do padrão BDD e orquestração de microsserviços e testes concorrentes em worktrees.
+
 ## Resolvendo Problemas Comuns
 
 - [Problemas comuns com **Docker**](./troubleshooting/docker.md)
 - [Problemas comuns no **Windows**](./troubleshooting/windows/commons.md)
   - [Configurar **WSL**](./troubleshooting/windows/wsl.md)
+
+### Skills de Suporte
+
+#### Windowsfy
+
+Skill focada em adaptar os exercícios para **Windows** nativo de forma personalizada por aluno.
+
+**Instalação:**
+
+```sh
+npx -y skills add https://github.com/unipds-engenharia-de-ia-aplicada/engenharia-de-software-com-ia-aplicada --skill windowsfy
+```
+
+**Uso:**
+
+```
+/windowsfy ./
+/windowsfy modulo01-fundamentos-de-ia-e-llms-para-programadores/exemplo-00-template
+```
+
+```
+<Cole a mensagem de erro>
+
+/windowsfy <caminho do exemplo>
+```
