@@ -5,9 +5,9 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "docker:up": "docker-compose up -d",
-    "docker:down": "docker-compose down",
-    "docker:logs": "docker-compose logs -f postgres",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f postgres",
     "chat:erickwendel": "node --experimental-strip-types --env-file .env src/index.ts --user erickwendel",
     "chat:ana": "node --experimental-strip-types --env-file .env src/index.ts --user ana",
     "test": "node --experimental-strip-types --env-file .env --test tests/**/*.test.ts",

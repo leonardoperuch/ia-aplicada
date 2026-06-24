@@ -25,7 +25,7 @@ jobs:
             docker-compose --version
 
         - name: Start Postgres and Adminer
-          run: docker-compose up -d mongodb
+          run: docker compose up -d mongodb
 
         - name: Use Node.js
           uses: actions/setup-node@v4

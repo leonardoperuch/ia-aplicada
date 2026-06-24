@@ -29,7 +29,7 @@ This project demonstrates how to perform CRUD operations using Node.js with the 
 
 To run the tests and see code coverage, use:
 ```bash
-docker-compose up -d mongodb
+docker compose up -d mongodb
 npm test
 ```
 This will execute the tests defined in the project and provide a coverage report.
@@ -39,7 +39,7 @@ This will execute the tests defined in the project and provide a coverage report
 
 To initialize the MongoDB, run:
 ```bash
-docker-compose up -d mongodb
+docker compose up -d mongodb
 ```
 
 To initialize the project, run:
