@@ -4,7 +4,7 @@
       "command": "node",
       "args": ["--experimental-strip-types", "./src/index.ts"],
       "env": {
-        "SERVICE_TOKEN": "47277f50-b2b8-451b-8c9a-d73c7122b46a"
+        "SERVICE_TOKEN": "b8a8db08-3d4d-4cfc-88d6-60dee815699b"
       },
     }
   }
