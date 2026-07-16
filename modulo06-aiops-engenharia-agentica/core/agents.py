@@ -151,7 +151,5 @@ def get_nexus_manager_agent(tools: Optional[List] = None) -> Agent:
         tools=tools or [],
         llm=nexus_llm,
         verbose=True,
-        allow_delegation=True
-    )
-=True # <--- ESSENCIAL para ele conseguir mandar nos outros
+        allow_delegation=True  # <--- ESSENCIAL para ele conseguir mandar nos outros
     )
