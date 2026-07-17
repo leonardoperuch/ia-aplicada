@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 from crewai.tools import tool
 
@@ -10,9 +11,12 @@ def run_checkov_scan(filename: str = "main.tf") -> str:
         return f"❌ Error: File '{filename}' not found for scanning."
 
     try:
-        # Executes Checkov CLI to scan the target file
+        # Invoked as a module of the current interpreter (not via PATH lookup):
+        # on WSL, PATH inherits Windows entries like .../WindowsApps that WSL
+        # can't stat, which makes a plain ["checkov", ...] PATH search raise
+        # PermissionError before ever reaching the venv's real executable.
         result = subprocess.run(
-            ["checkov", "-f", filename, "--quiet", "--compact", "--no-guide"],
+            [sys.executable, "-m", "checkov.main", "-f", filename, "--quiet", "--compact"],
             capture_output=True,
             text=True,
             check=False
