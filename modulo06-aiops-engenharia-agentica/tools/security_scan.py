@@ -22,8 +22,11 @@ def run_checkov_scan(filename: str = "main.tf") -> str:
             check=False
         )
 
-        # Checkov exits with non-zero code or prints FAILED if it finds violations
-        if result.returncode != 0 or "FAILED" in result.stdout:
+        # Distinguish between scan failures and tool errors
+        if result.returncode != 0 and result.stderr.strip():
+            return f"⚠️ Checkov execution error:\n{result.stderr.strip()}"
+
+        if "FAILED" in result.stdout:
             return f"❌ Security Failures Detected by Checkov:\n{result.stdout.strip()}"
         
         return "✅ Checkov: No vulnerabilities detected. Infrastructure code is secure."
